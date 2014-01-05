@@ -1,0 +1,48 @@
+#DogeTrampoline config file
+
+# Permission needed in order to use trampolines (default block: Sponge)
+permission: dogetrampoline.use
+
+# Message to send to players when they do not have the permission to use trampolines. (Use "" for no message, & for colors)
+permission-message: |
+  &c  such permission              many deny
+  &c       y u no can trampoline?
+  &c                           wow
+
+# Trampoline factor. Defines the upwards acceleration created by trampolines.
+# Default value: 5.0
+factor: 5.0
+
+########################################################################################################################
+##X#X#X#X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#X##X#
+########################################################################################################################
+#######################################   /                        ||       such ascii art
+# START ADVANCED CONFIGURATION        #  /  =========              ||                 many attention requir
+# DO NOT MODIFY UNLESS YOU            #  \  =========                           wow
+# ABSOLUTELY KNOW WHAT YOU ARE DOING  #   \                        []               muy importante
+#######################################
+# Minecraft Version: 1.7.2
+
+# Class name of NMS block class
+# default: net.minecraft.server.BlockSponge
+class-name: net.minecraft.server.v1_7_R1.BlockSponge
+
+# Name of intercepted (read: collision) method
+# default: a
+method-name: a
+
+# Parameters of intercepted method (Class names)
+# Method signature as of Minecraft 1.7.2:
+# public void a(World paramWorld, int paramInt1, int paramInt2, int paramInt3, Entity paramEntity)
+params:
+ - net.minecraft.server.v1_7_R1.World
+ - int
+ - int
+ - int
+ - net.minecraft.server.v1_7_R1.Entity
+
+# Specify at what param index (starting at 0) the net.minecraft.server.*.Entity is located.
+entity-param-index: 4
+
+# Specify the class name of the EntityPlayer which has the getBukkitEntity() method returning a CraftPlayer.
+player-class-name: net.minecraft.server.v1_7_R1.EntityPlayer

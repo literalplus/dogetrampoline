@@ -1,0 +1,5 @@
+name: DogeTrampoline
+version: 1.0
+author: xxyy
+website: http://xxyy.github.io/
+main: io.github.xxyy.dogetrampoline.DogeTrampolinePlugin
