@@ -45,7 +45,7 @@ public class NMSBlockProxyFactory {
             throw new UnsupportedOperationException("Unsupported Minecraft version. (See log for what to do now)", cnfe);
         }
 
-        if (!clazz.isAssignableFrom(NMSBlockProxy.class)) {
+        if (!NMSBlockProxy.class.isAssignableFrom(clazz)) {
             throw new AssertionError("Targeted Class does not implement NMSBlockProxy: " + clazz.getName());
         }
 
