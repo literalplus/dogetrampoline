@@ -64,7 +64,7 @@ public class DogeTrampolinePlugin extends JavaPlugin {
         }
 
         Vector velocity = plrTarget.getVelocity();
-        velocity.setZ(this.getTrampolineAcceleration());
+        velocity.setY(this.getTrampolineAcceleration());
         plrTarget.setVelocity(velocity);
     }
 }

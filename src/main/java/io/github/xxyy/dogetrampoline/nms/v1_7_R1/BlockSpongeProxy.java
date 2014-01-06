@@ -2,9 +2,7 @@ package io.github.xxyy.dogetrampoline.nms.v1_7_R1;
 
 import io.github.xxyy.dogetrampoline.DogeTrampolinePlugin;
 import io.github.xxyy.dogetrampoline.api.NMSBlockProxy;
-import net.minecraft.server.v1_7_R1.Entity;
-import net.minecraft.server.v1_7_R1.EntityPlayer;
-import net.minecraft.server.v1_7_R1.World;
+import net.minecraft.server.v1_7_R1.*;
 
 /**
  * Block proxy for Minecraft version 1.7.2
@@ -21,7 +19,7 @@ public class BlockSpongeProxy extends net.minecraft.server.v1_7_R1.BlockSponge i
     }
 
     @Override
-    public void a(World world, int i, int j, int k, Entity entity) { //NMS: This is called every time a Entity collides with a block of this type.
+    public void a(World world, int i, int j, int k, Entity entity, float f) {
         //super is empty
 
         if(!(entity instanceof EntityPlayer)){
