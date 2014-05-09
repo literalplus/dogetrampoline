@@ -11,7 +11,7 @@ Notes
 
 Building
 =========
-You can build this project by using Maven: `mvn clean package` or just grab a pre-built binary from my [build server](http://server.nowak-at.net/jenkins/job/public~dogetramp/). [![Build Status](http://ci.nowak-at.net/buildStatus/icon?job=public~dogetramp)](http://ci.nowak-at.net/job/public~dogetramp/)
+You can build this project by using Maven: `mvn clean package` or just grab a pre-built binary from my [build server](http://server.nowak-at.net/jenkins/job/public~dogetramp/). ![Build Status](http://ci.nowak-at.net/buildStatus/icon?job=public~dogetramp)
 
 License
 =======
