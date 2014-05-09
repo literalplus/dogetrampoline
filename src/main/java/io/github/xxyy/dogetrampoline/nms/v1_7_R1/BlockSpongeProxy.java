@@ -2,7 +2,6 @@ package io.github.xxyy.dogetrampoline.nms.v1_7_R1;
 
 import io.github.xxyy.dogetrampoline.DogeTrampolinePlugin;
 import io.github.xxyy.dogetrampoline.api.NMSBlockProxy;
-import net.minecraft.server.v1_7_R1.*;
 
 /**
  * Block proxy for Minecraft version 1.7.2
@@ -19,14 +18,14 @@ public class BlockSpongeProxy extends net.minecraft.server.v1_7_R1.BlockSponge i
     }
 
     @Override
-    public void a(World world, int i, int j, int k, Entity entity, float f) {
+    public void a(net.minecraft.server.v1_7_R1.World world, int i, int j, int k, net.minecraft.server.v1_7_R1.Entity entity, float f) { //Using FQN to avoid confusion with Bukkit's World and Entity interface
         //super is empty
 
-        if(!(entity instanceof EntityPlayer)){
+        if(!(entity instanceof net.minecraft.server.v1_7_R1.EntityPlayer)) { //Avoid confusion
             return;
         }
 
-        dogeTrampolinePlugin.tryApplyEffect(((EntityPlayer) entity).getBukkitEntity());
+        dogeTrampolinePlugin.tryApplyEffect(((net.minecraft.server.v1_7_R1.EntityPlayer) entity).getBukkitEntity());
     }
 
     @Override
